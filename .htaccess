@@ -2,4 +2,4 @@ DirectoryIndex index.php
 Options -Indexes
 php_flag register_globals off
 RewriteEngine On
-# RewriteRule ^-(.*) /redirect.php?key=$1 [L]
+RewriteRule ^-(.*) php/linker.php?key=$1 [L]

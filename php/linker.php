@@ -2,10 +2,9 @@
     require_once('./db.php');
 
     $key = htmlspecialchars($_GET['key']);
-    var_dump($key);
     if(empty($_GET['key'])) {}
     else {
-        $query = $pdo->prepare('SELECT * FROM `short` WHERE `short_key` = :key');
+        $query = $pdo->prepare('SELECT * FROM `links` WHERE `short_key` = :key');
         $query->execute([':key' => $key]);
         $row = $query->fetch(PDO::FETCH_ASSOC);
 

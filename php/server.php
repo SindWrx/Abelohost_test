@@ -32,7 +32,7 @@ else{
     $result = [
         'url' => $row['url'],
         'key' => $row['short_key'],
-        'link' => 'http://'.$_SERVER['HTTP_HOST'].'/'.$row['short_key']
+        'link' => 'http://'.$_SERVER['HTTP_HOST'].'/-'.$row['short_key']
     ];
 
     echo json_encode($result);
