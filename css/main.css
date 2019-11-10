@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS";
+    outline: none;
+    border: none;
+    z-index: 3;
+}
+
+.page{
+    width: 100vw;
+    height: 100vh;
+    background: url('../images/main-bg.jpg') no-repeat fixed center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.page::before{
+    background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+    background: -o-linear-gradient(bottom, #005bea, #00c6fb);
+    background: -moz-linear-gradient(bottom, #005bea, #00c6fb);
+    background: linear-gradient(bottom, #005bea, #00c6fb);
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.page-box{
+    width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.page-box_lowPB{
+    padding: 30px 30px 15px 30px;
+}
+
+.page-box_linkPage{
+    width: 500px;
+}
+
+.textField{
+    font-size: 15px;
+    line-height: 1.2;
+    color: #333333;
+    display: block;
+    width: 100%;
+    background: #fff;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 20px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.formHeader{
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.urlConverter{
+    color: #30353C;
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 300ms ease;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background-color: #30353C;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn:hover{
+    background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+    background: -o-linear-gradient(bottom, #005bea, #00c6fb);
+    background: -moz-linear-gradient(bottom, #005bea, #00c6fb);
+    background: linear-gradient(bottom, #005bea, #00c6fb);
+}
+
+.btn-submit{
+    width: 100%;
+    font-size: 15px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.btn-login,
+.btn-logout,
+.btn-links,
+.btn-main{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.btn-ready-link{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-links{
+    right: 170px;
+}
+
+.errorBlock{
+    text-align: center;
+    padding: 10px;
+    background-color: #ff0000ad;
+    margin-left: -30px;
+    margin-right: -30px;
+    font-weight: 500;
+    display: none;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    color: #fff;
+}
+
+.btn-loginForm{
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.linkContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.linkContainer .btn{
+    width: 210px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

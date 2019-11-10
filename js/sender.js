@@ -1,5 +1,5 @@
 addEventListener('load', () => {
-  document.querySelector('form[name=url_converter]').addEventListener('submit', passFormData);
+  document.querySelector('form.urlConverter').addEventListener('submit', passFormData);
 });
 
 async function passFormData() {
@@ -15,10 +15,15 @@ async function passFormData() {
         let json = await response.json();
         let resultEl = document.createElement('a');
 
-        resultEl.classList.add('readyLink');
+        resultEl.classList.add('btn', 'btn-ready-link');
         resultEl.textContent = json.link;
         resultEl.setAttribute('href', json.link);
-        document.body.append(resultEl);
+
+        let container = document.querySelector('.page-box[name=indexPageBox]');
+        let oldLink = container.querySelector('.btn-ready-link');
+
+        if(oldLink) oldLink.remove();
+        container.append(resultEl);
       }
     });
   }

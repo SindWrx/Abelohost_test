@@ -16,7 +16,7 @@ function passAuthData(){
       .then(async response => {
       if(response.ok){
         let data = await response.text();
-        if(data === 'Успешно') location.replace('links.php');
+        if(data === 'Успешно') location.replace('index.php');
         else showError();
       }
       else { throw new Error('Ошибка fetch запроса в logger.js'); }
@@ -25,5 +25,9 @@ function passAuthData(){
 }
 
 function showError(){
-
+  let message = document.querySelector('.errorBlock');
+  message.style.display = 'block';
+  requestAnimationFrame(() => {
+    message.style.opacity = '1';
+  })
 }
